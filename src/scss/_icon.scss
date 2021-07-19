@@ -1,0 +1,47 @@
+.c-icon {
+
+}
+
+.icon-hamburger {
+  display: block;
+  width: 2.7em;
+  height: 2em;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  span {
+    display: block;
+    height: .2em;
+    width: 100%;
+    background: #4F5164;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: .2em;
+    background: #4F5164;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+
+//fill: #A71A37;
+
+.icon-search {
+  display: inline-block;
+  font-size: 24px;
+  width: 1em;
+  height: 1em;
+  fill: #fff;
+}
