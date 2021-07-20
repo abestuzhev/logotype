@@ -24,6 +24,121 @@
     flex: 0 0 275px;
     background-color: #111015;
     height: 100vh;
+    padding: 54px 32px;
+
+    &-tab {
+        display: flex;
+        justify-content: space-between;
+        a {
+            color: #fff;
+            opacity: .6;
+            text-decoration: none;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-box {
+        &__head {
+            margin-bottom: 16px;
+            color: #fff;
+        }
+
+
+
+        &__title {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        &__icon {
+
+        }
+
+        &__body {
+
+        }
+
+        &-list {
+            margin: 0;
+            margin-bottom: 16px;
+            padding: 0;
+            &__item {
+
+                &:last-child {
+                    margin-bottom: 0;
+
+                    label {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &__more {
+            font-size: 12px;
+            text-decoration: none;
+            color: $blue;
+            font-weight: 700;
+        }
+    }
+
+}
+
+.c-checkbox {
+
+    input {
+        display: none;
+    }
+
+    label {
+        display: block;
+        position: relative;
+        font-size: 12px;
+        color: #ffffff;
+        cursor:pointer;
+        padding: 8px 0 8px 26px;
+        @include animation;
+
+        &:hover {
+            @include animation;
+            &::before {
+                content: '';
+                border-color: $blue;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border: 2px solid #38373c;
+            border-radius: 5px;
+
+        }
+    }
+
+    input:checked + label {
+        &::before {
+            content: '';
+            background-color: $blue;
+            border-color: $blue;
+        }
+
+        &:hover {
+            @include animation;
+            &::before {
+                content: '';
+                background-color: $blueDark;
+                border-color: $blueDark;
+            }
+        }
+    }
 }
 
 .header {
@@ -114,5 +229,27 @@
         outline: none;
         cursor: pointer;
         padding: 15px 26px;
+    }
+}
+
+.banner {
+    &-top {
+        height: 440px;
+        margin-right: -60px;
+        margin-left: -60px;
+        margin-top: -147px;
+        background: url(./../src/img/banner-img.jpg) 0 0 no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        &__shadow {
+            &-top {
+
+            }
+
+            &-bottom {
+
+            }
+        }
     }
 }
