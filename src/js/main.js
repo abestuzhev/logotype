@@ -41,13 +41,18 @@ const resultsSlider = new Swiper('.js-slider', {
 
 
 
-document.addEventListener('click', function (event) {
+// document.addEventListener('click', function (event) {
+//
+//   if (event.target.dataset.sidebar === 'show') {
+//     // event.preventDefault()
+//     console.log(event);
+//   }
+// });
 
-  if (event.target.dataset.show === 'consultation') {
-    event.preventDefault()
-    console.log('consultation');
-  }
-});
+$(".sidebar-box__head").on("click", function(){
+  $(this).toggleClass("is-show");
+  $(this).parents(".sidebar-box").find(".sidebar-box__body").slideToggle(200);
+})
 
 
 const windowWidth = (window.innerWidth); // вся ширина окна
