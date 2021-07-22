@@ -314,16 +314,69 @@
             font-weight: 700;
             text-decoration: none;
             color: #fff;
-            margin-right: 30px;
+            //margin-right: 30px;
+            padding: 20px 15px;
+
+            &:last-child {
+                padding-right: 0;
+            }
         }
     }
 
     &-dropdown {
+        padding: 20px 0 20px 30px;
+        &:hover {
+            .header-dropdown-menu {
+                display: block;
+            }
+        }
+
         &__link {
             font-size: 16px;
             font-weight: 700;
             text-decoration: none;
             color: #fff;
+            letter-spacing: 2px;
+            cursor:pointer;
+        }
+
+        &-menu {
+            display: none;
+            position: absolute;
+            z-index: -1;
+            top: 100%;
+            right: -16px;
+            background: $black;
+            width: 190px;
+            padding: 14px 30px;
+            box-shadow: 0 9px 21px 0 rgba(0, 0, 0, 0.7);
+            border-radius: 25px 0 0 0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                right: 0;
+                width: 55px;
+                height: 54px;
+                background-color: $black;
+                border-radius: 25px 25px 0 0;
+            }
+
+            &__link {
+                display: block;
+                font-weight: 700;
+                padding: 16px 0;
+                text-decoration: none;
+                color: #fff;
+                text-align: center;
+                @include animation;
+
+                &:hover {
+                    color: $blue;
+                    @include animation;
+                }
+            }
         }
     }
 }
@@ -337,6 +390,19 @@
     align-items: center;
     border-radius: 27px;
     margin-right: 30px;
+    position: relative;
+    @include animation;
+
+    &.is-focus {
+        background-color: $black;
+        @include animation;
+
+        .search-result {
+            @include animation;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
 
     @media screen and (min-width:1600px) {
         //margin-right: 60px;
@@ -363,6 +429,93 @@
         outline: none;
         cursor: pointer;
         padding: 15px 26px;
+
+        svg {
+            @include animation;
+        }
+
+        &:hover {
+            svg {
+                @include animation;
+                fill: $blue;
+            }
+        }
+    }
+
+    &-result {
+        opacity: 0;
+        visibility: hidden;
+        padding-top: 60px;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(24, 23, 28, .90);
+        border-radius: 27px;
+        overflow: hidden;
+        @include animation;
+
+        &-list {
+            &__item {
+                &:nth-child(even) {
+                    background-color: rgba(24, 23, 28, .90);
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+
+
+        &-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 35px;
+            color: #fff;
+            font-weight: 400;
+            font-size: 12px;
+            @include animation;
+
+            &:hover {
+                background-color: $blueDark;
+                @include animation;
+
+                .search-result-card__price {
+                    color: #fff;
+                    @include animation;
+                }
+
+            }
+
+            &__name {
+                flex: 0 0 35%;
+            }
+
+            &__icon {
+                padding: 0 18px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex: 0 0 18%;
+            }
+
+            &__type {
+                flex: 0 0 35%;
+            }
+
+            &__price {
+                font-size: 12px;
+                color: #0462dc;
+                font-weight: 700;
+                text-align: right;
+                flex: 0 0 12%;
+                white-space: nowrap;
+            }
+        }
     }
 }
 

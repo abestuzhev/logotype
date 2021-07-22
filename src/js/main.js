@@ -54,6 +54,14 @@ $(".sidebar-box__head").on("click", function(){
   $(this).parents(".sidebar-box").find(".sidebar-box__body").slideToggle(200);
 });
 
+$(".search input").focus(function(){
+  $(this).parents(".search").addClass("is-focus");
+});
+
+$(".search input").blur(function(){
+  $(this).parents(".search").removeClass("is-focus");
+});
+
 
 $(".sidebar-tab a").on("click", function(event){
   event.preventDefault();
