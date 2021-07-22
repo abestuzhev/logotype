@@ -1,14 +1,43 @@
 <div class="sidebar">
-
     <div class="sidebar-top">
         <div class="sidebar-tab">
-            <a href="#" class="active">Войти</a>
-            <a href="#">Регистрация</a>
+            <a href="#sidebar-auth" class="active">Войти</a>
+            <a href="#sidebar-registration">Регистрация</a>
         </div>
-        <div class="sidebar-auth"></div>
-        <div class="sidebar-registration"></div>
-        <div class="sidebar-basket">
-            <div class="sidebar-basket-list"></div>
+        <div class="sidebar-top__body">
+            <div class="sidebar-auth is-show" id="sidebar-auth">
+                <form action="" class="c-form">
+                    <div class="c-form__body">
+                        <div class="c-form__item">
+                            <input type="text" name="userLogin" class="c-input" placeholder="Логин">
+                        </div>
+                        <div class="c-form__item">
+                            <input type="password" name="userPassword" class="c-input" placeholder="Пароль">
+                        </div>
+                        <div class="c-form__footer">
+                            <div class="c-btn-layout c-btn-layout--center">
+                                <button class="c-btn c-btn--small c-btn--fullwidth">Войти</button>
+                            </div>
+                            <div class="c-form-layout c-form-layout--center">
+                                <a href="#" class="c-form-link">Забыли пароль?</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="sidebar-registration" id="sidebar-registration">
+
+            </div>
+            <div class="sidebar-basket active">
+                <div class="sidebar-basket-list"></div>
+                <div class="sidebar-basket__icon">
+                    <svg class="c-icon icon-basket">
+                        <use xlink:href="./src/img/sprite.svg#icon-basket"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-top__footer">
             <div class="sidebar-basket__footer">
                 <div class="sidebar-basket-count">
                     <span>Корзина</span>
@@ -64,6 +93,59 @@
         </div>
     </div>
     {# END sidebar-box#}
+
+    {# START sidebar-box#}
+    <div class="sidebar-box">
+        <div class="sidebar-box__head is-show">
+            <div class="sidebar-box__title">Цвета</div>
+            <div class="sidebar-box__icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="sidebar-box__body">
+            <ul class="sidebar-box-list sidebar-box-list--horizontal">
+                <li class="sidebar-box-list__item sidebar-box-list__item--33">
+                    <div class="c-checkbox-custom c-checkbox-custom--small">
+                        <input type="checkbox" id="color-01" name="color-01">
+                        <label for="color-01"><img src="./../src/img/icon-checkbox-1.png" alt=""></label>
+                    </div>
+                </li>
+                <li class="sidebar-box-list__item sidebar-box-list__item--33">
+                    <div class="c-checkbox-custom c-checkbox-custom--small">
+                        <input type="checkbox" id="color-02" name="color-02">
+                        <label for="color-02"><img src="./../src/img/icon-checkbox-2.png" alt=""></label>
+                    </div>
+                </li>
+                <li class="sidebar-box-list__item sidebar-box-list__item--33">
+                    <div class="c-checkbox-custom c-checkbox-custom--small">
+                        <input type="checkbox" id="color-03" name="color-03">
+                        <label for="color-03"><img src="./../src/img/icon-checkbox-3.png" alt=""></label>
+                    </div>
+                </li>
+                <li class="sidebar-box-list__item sidebar-box-list__item--33">
+                    <div class="c-checkbox-custom c-checkbox-custom--small">
+                        <input type="checkbox" id="color-04" name="color-04">
+                        <label for="color-04"><img src="./../src/img/icon-checkbox-4.png" alt=""></label>
+                    </div>
+                </li>
+                <li class="sidebar-box-list__item sidebar-box-list__item--33">
+                    <div class="c-checkbox-custom c-checkbox-custom--small">
+                        <input type="checkbox" id="color-05" name="color-05">
+                        <label for="color-05"><img src="./../src/img/icon-checkbox-5.png" alt=""></label>
+                    </div>
+                </li>
+                <li class="sidebar-box-list__item sidebar-box-list__item--33">
+                    <div class="c-checkbox-custom c-checkbox-custom--small">
+                        <input type="checkbox" id="color-06" name="color-06">
+                        <label for="color-06"><img src="./../src/img/icon-checkbox-6.png" alt=""></label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {# END sidebar-box#}
+
     {# START sidebar-box#}
     <div class="sidebar-box">
         <div class="sidebar-box__head is-show">
@@ -110,6 +192,59 @@
         </div>
     </div>
     {# END sidebar-box#}
+
+    {# START sidebar-box#}
+    <div class="sidebar-box">
+        <div class="sidebar-box__head is-show">
+            <div class="sidebar-box__title">Редкость</div>
+            <div class="sidebar-box__icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="sidebar-box__body">
+            <ul class="sidebar-box-list sidebar-box-list--horizontal">
+                <li class="sidebar-box-list__item sidebar-box-list__item--50">
+                    <div class="c-checkbox-custom c-checkbox-custom--big">
+                        <input type="checkbox" id="rarity-01" name="rarity-01">
+                        <label for="rarity-01">
+                            <span class="c-checkbox-custom__point" style="background:#3d3d3d;"></span>
+                            <span class="c-checkbox-custom__text">Common</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="sidebar-box-list__item sidebar-box-list__item--50">
+                    <div class="c-checkbox-custom c-checkbox-custom--big">
+                        <input type="checkbox" id="rarity-02" name="rarity-02">
+                        <label for="rarity-02">
+                            <span class="c-checkbox-custom__point" style="background:#e69546;"></span>
+                            <span class="c-checkbox-custom__text">Rare</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="sidebar-box-list__item sidebar-box-list__item--50">
+                    <div class="c-checkbox-custom c-checkbox-custom--big">
+                        <input type="checkbox" id="rarity-03" name="rarity-03">
+                        <label for="rarity-03">
+                            <span class="c-checkbox-custom__point" style="background:#d0d0d0;"></span>
+                            <span class="c-checkbox-custom__text">Uncommon</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="sidebar-box-list__item sidebar-box-list__item--50">
+                    <div class="c-checkbox-custom c-checkbox-custom--big">
+                        <input type="checkbox" id="rarity-04" name="rarity-04">
+                        <label for="rarity-04">
+                            <span class="c-checkbox-custom__point" style="background:#e35340;"></span>
+                            <span class="c-checkbox-custom__text">Mythic</span>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {# END sidebar-box#}
+
     {# START sidebar-box#}
     <div class="sidebar-box">
         <div class="sidebar-box__head is-show">

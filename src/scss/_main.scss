@@ -23,19 +23,133 @@
 .sidebar {
     flex: 0 0 275px;
     background-color: #111015;
-    height: 100vh;
+    height: 100%;
     padding: 54px 32px;
+
+    &-top {
+        margin-bottom: 64px;
+        &__body {
+            height: 213px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+    }
+
+    &-auth {
+        width: 100%;
+        position: absolute;
+        opacity: 0;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        height: 100%;
+        background-color: #18171c;
+        border-radius: 10px;
+        padding: 28px 18px;
+
+        &.is-show {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &-registration {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        height: 100%;
+        background-color: #18171c;
+        border-radius: 10px;
+
+    }
+
+    &-basket {
+        height: 100%;
+        position: relative;
+        background: radial-gradient(circle, rgba(255,255,255,0.20) 0%, rgba(24,23,28,0) 50%);
+
+        &.active {
+            background: radial-gradient(circle, rgba(4,98,220,0.30) 0%, rgba(24,23,28,0) 70%);
+
+            .sidebar-basket__icon {
+                svg {
+                    fill: #111015;
+                }
+            }
+        }
+
+        &-list {
+            height: 100%;
+        }
+
+        &__icon {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+
+        }
+
+        &-count {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            span {
+                display: block;
+                font-size: 16px;
+                font-weight: 700;
+                margin-right: 11px;
+            }
+
+            &__number {
+                width: 32px;
+                height: 24px;
+                line-height: 25px;
+                background-color: #fff;
+                color: $black;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 700;
+                border-radius: 1200px;
+            }
+        }
+
+        &__total {
+            font-size: 16px;
+        }
+    }
+
+
 
     &-tab {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 20px;
         a {
             color: #fff;
             opacity: .6;
             text-decoration: none;
+            font-weight: 700;
+
+            &:hover {
+                opacity: 1;
+                @include animation;
+            }
 
             &.active {
                 opacity: 1;
+                color: $blue;
             }
         }
     }
@@ -117,7 +231,26 @@
             margin-bottom: 16px;
             padding: 0;
             list-style: none;
+
+            &--horizontal {
+                display: flex;
+                justify-content: flex-start;
+                flex-flow: row wrap;
+                align-items: stretch;
+
+                .sidebar-box-list__item {
+                    margin-bottom: 8px;
+                }
+            }
+
             &__item {
+
+                &--33 {
+                    width: 33.3333%;
+                }
+                &--50 {
+                    width: 50%;
+                }
 
                 &:last-child {
                     margin-bottom: 0;
@@ -139,59 +272,6 @@
 
 }
 
-.c-checkbox {
-
-    input {
-        display: none;
-    }
-
-    label {
-        display: block;
-        position: relative;
-        font-size: 12px;
-        color: #ffffff;
-        cursor:pointer;
-        padding: 8px 0 8px 26px;
-        @include animation;
-
-        &:hover {
-            @include animation;
-            &::before {
-                content: '';
-                border-color: $blue;
-            }
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 14px;
-            height: 14px;
-            border: 2px solid #38373c;
-            border-radius: 5px;
-
-        }
-    }
-
-    input:checked + label {
-        &::before {
-            content: '';
-            background-color: $blue;
-            border-color: $blue;
-        }
-
-        &:hover {
-            @include animation;
-            &::before {
-                content: '';
-                background-color: $blueDark;
-                border-color: $blueDark;
-            }
-        }
-    }
-}
 
 .header {
     display: flex;

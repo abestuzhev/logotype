@@ -52,7 +52,17 @@ const resultsSlider = new Swiper('.js-slider', {
 $(".sidebar-box__head").on("click", function(){
   $(this).toggleClass("is-show");
   $(this).parents(".sidebar-box").find(".sidebar-box__body").slideToggle(200);
-})
+});
+
+
+$(".sidebar-tab a").on("click", function(event){
+  event.preventDefault();
+  const href = $(this).attr("href");
+  $(href).siblings().removeClass("is-show");
+  $(this).siblings().removeClass("active");
+  $(this).toggleClass("active");
+  $(href).toggleClass("is-show");
+});
 
 
 const windowWidth = (window.innerWidth); // вся ширина окна
