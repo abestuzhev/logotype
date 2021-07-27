@@ -1,0 +1,652 @@
+<!-- HEADER -->
+{% include "./layout/header.twig" %}
+
+<div class="content">
+    {% block page %}
+        {% include "./layout/header-menu.twig" %}
+
+        <div class="banner-top">
+            <div class="banner-top__shadow-top"></div>
+            <div class="banner-top__shadow-bottom"></div>
+        </div>
+        <div class="page-content with-slider">
+            <div class="panel">
+                <div class="panel-sort">
+                    <div class="panel-sort__title">Сортировка</div>
+                    <div class="panel-sort-list">
+                        <div class="panel-sort-list__item active">
+                            <a href="#" class="panel-btn">Популярные</a>
+                        </div>
+                        <div class="panel-sort-list__item">
+                            <a href="#" class="panel-btn">Название</a>
+                        </div>
+                        <div class="panel-sort-list__item">
+                            <a href="#" class="panel-btn">Цена</a>
+                        </div>
+                        <div class="panel-sort-list__item">
+                            <a href="#" class="panel-btn">Выпуск</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-view">
+                    <div class="panel-view__icon active" data-view="modern">
+                        <a href="#view-modern">
+                            <svg class="c-icon icon-modern">
+                                <use xlink:href="./src/img/sprite.svg#icon-modern"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="panel-view__icon " data-view="classic">
+                        <a href="#view-classic">
+                            <svg class="c-icon icon-classic">
+                                <use xlink:href="./src/img/sprite.svg#icon-classic"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="panel-view__icon " data-view="grid">
+                        <a href="#view-grid">
+                            <svg class="c-icon icon-grid">
+                                <use xlink:href="./src/img/sprite.svg#icon-grid"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="panel-view__icon " data-view="list">
+                        <a href="#view-list">
+                            <svg class="c-icon icon-list">
+                                <use xlink:href="./src/img/sprite.svg#icon-list"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product product-tab">
+                <div id="view-modern" class="product-list modern is-show">
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <img src="./src/img/product-card-art-1.jpg" alt="">
+                                <div class="product-card__title">Conflux</div>
+                                <div class="product-card__shadow"></div>
+                                <div class="product-card__indicator" style="background-color: #ffb049;"></div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__label">
+                                    <img src="./src/img/product-icon-set-1.png" alt="">
+                                </div>
+                                <div class="product-card__head">
+                                    <div class="product-card__name">Conflux</div>
+                                    <div class="product-card__icon">
+                                        <svg class="c-icon icon-conflux">
+                                            <use xlink:href="./src/img/sprite.svg#icon-conflux"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">210 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <img src="./src/img/product-card-art-2.jpg" alt="">
+                                <div class="product-card__title">Arahbo, Roar of the World </div>
+                                <div class="product-card__shadow"></div>
+                                <div class="product-card__indicator" style="background-color: #ffb049;"></div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__label">
+                                    <img src="./src/img/product-icon-set-1.png" alt="">
+                                </div>
+                                <div class="product-card__head">
+                                    <div class="product-card__name">Commander 2017</div>
+                                    <div class="product-card__icon">
+                                        <svg class="c-icon icon-conflux">
+                                            <use xlink:href="./src/img/sprite.svg#icon-conflux"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">210 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--fullwidth c-btn--dark">Подписаться</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <img src="./src/img/product-card-art-3.jpg" alt="">
+                                <div class="product-card__title">Parhelion II</div>
+                                <div class="product-card__shadow"></div>
+                                <div class="product-card__indicator" style="background-color: #fff;"></div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__label">
+                                    <img src="./src/img/product-icon-set-1.png" alt="">
+                                </div>
+                                <div class="product-card__head">
+                                    <div class="product-card__name">War of the Spark</div>
+                                    <div class="product-card__icon">
+                                        <svg class="c-icon icon-conflux">
+                                            <use xlink:href="./src/img/sprite.svg#icon-conflux"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">29 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <img src="./src/img/product-card-art-4.jpg" alt="">
+                                <div class="product-card__title">Омнат, Очаг Маны </div>
+                                <div class="product-card__shadow"></div>
+                                <div class="product-card__indicator" style="background-color: #44a63d;"></div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__label">
+                                    <img src="./src/img/product-icon-set-1.png" alt="">
+                                </div>
+                                <div class="product-card__head">
+                                    <div class="product-card__name">Worldwake</div>
+                                    <div class="product-card__icon">
+                                        <svg class="c-icon icon-conflux">
+                                            <use xlink:href="./src/img/sprite.svg#icon-conflux"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">210 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <img src="./src/img/product-card-art-1.jpg" alt="">
+                                <div class="product-card__title">Conflux</div>
+                                <div class="product-card__shadow"></div>
+                                <div class="product-card__indicator" style="background-color: #ffb049;"></div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__label">
+                                    <img src="./src/img/product-icon-set-1.png" alt="">
+                                </div>
+                                <div class="product-card__head">
+                                    <div class="product-card__name">Conflux</div>
+                                    <div class="product-card__icon">
+                                        <svg class="c-icon icon-conflux">
+                                            <use xlink:href="./src/img/sprite.svg#icon-conflux"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">210 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <img src="./src/img/product-card-art-2.jpg" alt="">
+                                <div class="product-card__title">Arahbo, Roar of the World </div>
+                                <div class="product-card__shadow"></div>
+                                <div class="product-card__indicator" style="background-color: #ffb049;"></div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__label">
+                                    <img src="./src/img/product-icon-set-1.png" alt="">
+                                </div>
+                                <div class="product-card__head">
+                                    <div class="product-card__name">Commander 2017</div>
+                                    <div class="product-card__icon">
+                                        <svg class="c-icon icon-conflux">
+                                            <use xlink:href="./src/img/sprite.svg#icon-conflux"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">210 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--fullwidth c-btn--dark">Подписаться</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <img src="./src/img/product-card-art-3.jpg" alt="">
+                                <div class="product-card__title">Parhelion II</div>
+                                <div class="product-card__shadow"></div>
+                                <div class="product-card__indicator" style="background-color: #fff;"></div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__label">
+                                    <img src="./src/img/product-icon-set-1.png" alt="">
+                                </div>
+                                <div class="product-card__head">
+                                    <div class="product-card__name">War of the Spark</div>
+                                    <div class="product-card__icon">
+                                        <svg class="c-icon icon-conflux">
+                                            <use xlink:href="./src/img/sprite.svg#icon-conflux"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">29 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <img src="./src/img/product-card-art-4.jpg" alt="">
+                                <div class="product-card__title">Омнат, Очаг Маны </div>
+                                <div class="product-card__shadow"></div>
+                                <div class="product-card__indicator" style="background-color: #44a63d;"></div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__label">
+                                    <img src="./src/img/product-icon-set-1.png" alt="">
+                                </div>
+                                <div class="product-card__head">
+                                    <div class="product-card__name">Worldwake</div>
+                                    <div class="product-card__icon">
+                                        <svg class="c-icon icon-conflux">
+                                            <use xlink:href="./src/img/sprite.svg#icon-conflux"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">210 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="view-classic" class="product-list classic">
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__price">29 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__price">491 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__price">1467 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__price">210 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__price">1467 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__price">210 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__price">29 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__price">491 р.</div>
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                </div>
+                <div id="view-grid" class="product-list grid">
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--fullwidth">29 р.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--fullwidth">29 р.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--fullwidth">29 р.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--fullwidth">29 р.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="./src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--fullwidth">29 р.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                </div>
+                <div id="view-list" class="product-list list">
+                    <div class="product-table">
+                        <div class="product-table-head">
+                            <div class="product-table-head__col">
+                                <div class="product-table-head__title">Название</div>
+                            </div>
+                            <div class="product-table-head__col">
+                                <div class="product-table-head__title">Выпуск</div>
+                            </div>
+                            <div class="product-table-head__col">
+                                <div class="product-table-head__title">Тип</div>
+                            </div>
+                            <div class="product-table-head__col">
+                                <div class="product-table-head__title">Редкость</div>
+                            </div>
+                            <div class="product-table-head__col">
+                                <div class="product-table-head__title">Цена</div>
+                            </div>
+                            <div class="product-table-head__col">
+                                <div class="product-table-head__title"></div>
+                            </div>
+                        </div>
+                        <div class="product-table-body">
+                            {# START product-table-row#}
+                            <div class="product-table-row">
+                                <div class="product-table-row__col">
+                                    <div class="product-table-row__name">"Rumors of My Death "</div>
+                                </div>
+                                <div class="product-table-row__col">
+                                    <div class="product-table-row__release">Strixhaven: School of Mages</div>
+                                </div>
+                                <div class="product-table-row__col">
+                                    <div class="product-table-row__type">Enchantment</div>
+                                </div>
+                                <div class="product-table-row__col">
+                                    <div class="product-table-row__rarity">Uncommon</div>
+                                </div>
+                                <div class="product-table-row__col">
+                                    <div class="product-table-row__price">18 р.</div>
+                                </div>
+                                <div class="product-table-row__col">
+                                    <div class="product-table-row__btns">
+                                        <div class="c-btn-layout c-btn-layout--center">
+                                            <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                            <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {# END product-table-row#}
+                            {# START product-table-row#}
+                            <div class="product-table-row">
+                                <div class="product-table-row__col">
+                                    <div class="product-table-row__name">"Rumors of My Death "</div>
+                                </div>
+                                <div class="product-table-row__col">
+                                    <div class="product-table-row__release">Strixhaven: School of Mages</div>
+                                </div>
+                                <div class="product-table-row__col">
+                                    <div class="product-table-row__type">Enchantment</div>
+                                </div>
+                                <div class="product-table-row__col">
+                                    <div class="product-table-row__rarity">Uncommon</div>
+                                </div>
+                                <div class="product-table-row__col">
+                                    <div class="product-table-row__price">1487 р.</div>
+                                </div>
+                                <div class="product-table-row__col">
+                                    <div class="product-table-row__btns">
+                                        <div class="c-btn-layout c-btn-layout--center">
+                                            <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                            <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {# END product-table-row#}
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    {% endblock %}
+</div>
+
+{% include "./layout/sidebar.twig" %}
+
+<!-- FOOTER -->
+{% include "./layout/footer.twig" %}

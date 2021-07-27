@@ -1,0 +1,44 @@
+<!-- HEADER -->
+{% include "./layout/header.twig" %}
+
+<div class="content">
+    {% block page %}
+        {% include "./layout/header-menu.twig" %}
+        <div class="page-content">
+            <div class="lk">
+                <h1 class="c-title__h1">Личный кабинет — Обратная связь</h1>
+
+                <div class="lk-feedback">
+                    <form action="" class="c-form">
+                        <div class="c-form-box">
+                            <div class="c-form-box__title">Форма обратной связи с магазином</div>
+                            <div class="c-grid">
+                                <div class="c-grid-col c-grid-col--100">
+                                    <div class="c-form__item">
+                                        <div class="c-form-card">
+                                            <label class="c-label">Ваш вопрос, отзыв или пожелание :</label>
+                                            <textarea name="" id="" rows="10" class="c-textarea"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-form-box__footer">
+                                <div class="c-btn-layout c-btn-layout--left">
+                                    <button class="c-btn c-btn--middle c-btn--defaultWidth c-btn--round">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+    {% endblock %}
+</div>
+
+{% include "./layout/sidebar.twig" %}
+
+<!-- FOOTER -->
+{% include "./layout/footer.twig" %}

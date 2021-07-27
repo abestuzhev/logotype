@@ -63,14 +63,29 @@ $(".search input").blur(function(){
 });
 
 
-$(".sidebar-tab a").on("click", function(event){
+$(".panel-view__icon a").on("click", function(event){
   event.preventDefault();
   const href = $(this).attr("href");
   $(href).siblings().removeClass("is-show");
-  $(this).siblings().removeClass("active");
-  $(this).toggleClass("active");
+  $(this).parents(".panel-view__icon").siblings().removeClass("active");
+  $(this).parents(".panel-view__icon").toggleClass("active");
   $(href).toggleClass("is-show");
 });
+
+if($(".sidebar-box").has("is-hide")){
+  console.log("sidebar-box have class is-hide")
+  $('.sidebar-box__head').removeClass("is-show");
+  $('.sidebar-box__body').css("display", "none");
+};
+
+
+$(".c-form-box-info__link").on("click", function(event){
+  event.preventDefault();
+  const parent = $(this).parents(".c-form-box-info");
+  parent.toggleClass("is-edited");
+  parent.find("input").focus();
+  parent.has("is-edited") ? $(this).text("Принять") : $(this).text("Изменить");
+})
 
 
 const windowWidth = (window.innerWidth); // вся ширина окна

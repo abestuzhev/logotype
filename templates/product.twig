@@ -1,0 +1,171 @@
+<!-- HEADER -->
+{% include "./layout/header.twig" %}
+
+<div class="content">
+    {% block page %}
+        {% include "./layout/header-menu.twig" %}
+        <div class="page-content">
+            <div class="product">
+                <div class="product-page">
+                    <div class="product-page-card">
+                        <div class="product-page__img">
+                            <img src="./src/img/product-card-facial.png" alt="">
+                        </div>
+                        <div class="product-page__body">
+                            <div class="product-page-title">
+                                <h1 class="c-title__h1">Arahbo, Roar of the World</h1>
+                                <div class="product-page-title__icon">
+                                    <div class="product-icons">
+                                        <div class="product-icons__item">
+                                            <svg class="c-icon icon-mana">
+                                                <use xlink:href="./src/img/sprite.svg#icon-mana"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-page__subtitle">Legendary <a href="#">Creature</a> — Cat Avatar</div>
+                            <div class="product-page__description">
+                                <p>
+                                    Eminence — At the beginning of combat on your turn, if Arahbo, Roar of the World is in the command zone or on the battlefield, another target Cat you control gets +3/+3 until end of turn.
+                                </p>
+                                <p>
+                                    Whenever another Cat you control attacks, you may pay . If you do, it gains trample and gets +X/+X until end of turn, where X is its power.
+                                </p>
+                            </div>
+                            <div class="product-page-character">
+                                <div class="product-page-character__row">
+                                    <div class="product-page-character__name">Выпуск:</div>
+                                    <div class="product-page-character__value">Commander 2017</div>
+                                </div>
+                                <div class="product-page-character__row">
+                                    <div class="product-page-character__name">Редкость:</div>
+                                    <div class="product-page-character__value">Mythic Rare</div>
+                                </div>
+                                <div class="product-page-character__row">
+                                    <div class="product-page-character__name">Художник:</div>
+                                    <div class="product-page-character__value">Jesper Ejsing</div>
+                                </div>
+                                <div class="product-page-character__row">
+                                    <div class="product-page-character__name">Вид карты:</div>
+                                    <div class="product-page-character__value">Non-foil</div>
+                                </div>
+                            </div>
+                            <div class="product-page-footer">
+                                <div class="product-page__price">29 р.</div>
+                                <div class="product-page-btns">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">В корзину</a>
+                                        <a href="#" class="c-btn c-btn--small c-btn--round">+4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="view-grid" class="product-list grid">
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="../src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--fullwidth">29 р.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="../src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--fullwidth">29 р.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="../src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--fullwidth">29 р.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="../src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--fullwidth">29 р.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                    {# START product-list__item#}
+                    <div class="product-list__item">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <div class="product-card__img-wrapper">
+                                    <img src="../src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__footer">
+                                    <div class="c-btn-layout c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--fullwidth">29 р.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# END product-list__item#}
+                </div>
+            </div>
+
+        </div>
+
+
+    {% endblock %}
+</div>
+
+{% include "./layout/sidebar.twig" %}
+
+<!-- FOOTER -->
+{% include "./layout/footer.twig" %}
