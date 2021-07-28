@@ -94,6 +94,7 @@ p {
         padding: 38px 32px 38px 32px;
         position: relative;
         border-radius: 10px;
+        height: 100%;
 
         &__title {
             font-size: 16px;
@@ -119,7 +120,7 @@ p {
             align-items: center;
 
             &.is-edited {
-                input {
+                .c-form-box-info__value input {
                     opacity: 1;
                     position: absolute;
                     z-index: 1;
@@ -129,6 +130,7 @@ p {
             &__user {
                 padding-right: 21px;
                 flex: 0 1 100%;
+                position: relative;
             }
 
             &__value {
@@ -153,7 +155,7 @@ p {
             }
 
             &__operation {
-                flex: 0 1 100px;
+                flex: 0 0 100px;
             }
 
             &__link {
@@ -491,6 +493,10 @@ p {
         &--right {
             justify-content: flex-end;
         }
+
+        &--column {
+            flex-direction: column;
+        }
     }
 
     &--dark {
@@ -518,5 +524,45 @@ p {
     }
     &--middle {
         padding: 15px 30px;
+    }
+}
+
+.c-order {
+    width: 100%;
+
+    &-list {
+        &__item {
+            margin-bottom: 8px;
+        }
+    }
+
+    &-card {
+        color: #b0b0b0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &__count {
+            font-size: 12px;
+            width: 16px;
+            line-height: 16px;
+            padding-right: 8px;
+        }
+
+        &__symbol {
+            width: 17px;
+            font-size: 16px;
+            padding-right: 8px;
+            color: $blue;
+            line-height: 12px;
+            font-weight: 700;
+        }
+
+        &__title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 16px;
+            font-size: 12px;
+        }
     }
 }

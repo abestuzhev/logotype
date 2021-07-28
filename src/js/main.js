@@ -79,12 +79,12 @@ if($(".sidebar-box").has("is-hide")){
 };
 
 
-$(".c-form-box-info__link").on("click", function(event){
+$(".c-form-box-info__link.is-change").on("click", function(event){
   event.preventDefault();
   const parent = $(this).parents(".c-form-box-info");
   parent.toggleClass("is-edited");
   parent.find("input").focus();
-  parent.has("is-edited") ? $(this).text("Принять") : $(this).text("Изменить");
+  parent.hasClass("is-edited") ? $(this).text("Принять") : $(this).text("Изменить");
 })
 
 

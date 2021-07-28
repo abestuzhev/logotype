@@ -1,0 +1,113 @@
+<!-- HEADER -->
+{% include "./layout/header.twig" %}
+
+<div class="content">
+    {% block page %}
+        {% include "./layout/header-menu.twig" %}
+        <div class="page-content">
+            <div class="lk">
+                <h1 class="c-title__h1">Личный кабинет — Заказы</h1>
+
+                <div class="lk-order">
+                    <div class="order-list">
+                        <div class="order-card">
+                            <div class="order-card-info">
+                                <div class="order-card-info__title">Заказ №0001-0001</div>
+                                <div class="order-card-info-characteristic">
+                                    <div class="order-card-info-characteristic__list">
+                                        <div class="order-card-info-characteristic__item">
+                                            <div class="order-card-info-characteristic__name">Дата оформления:</div>
+                                            <div class="order-card-info-characteristic__value">06 июня 2010</div>
+                                        </div>
+                                        <div class="order-card-info-characteristic__item">
+                                            <div class="order-card-info-characteristic__name">К оплате:</div>
+                                            <div class="order-card-info-characteristic__value">11 523 р.</div>
+                                        </div>
+                                        <div class="order-card-info-characteristic__item">
+                                            <div class="order-card-info-characteristic__name">Дата доставки:</div>
+                                            <div class="order-card-info-characteristic__value">1 июля в 09:49</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-card-list">
+                                <div class="c-order">
+                                    <div class="c-order-list">
+                                        <div class="c-order-list__item">
+                                            <div class="c-order-card">
+                                                <div class="c-order-card__count">4</div>
+                                                <div class="c-order-card__symbol">Х</div>
+                                                <div class="c-order-card__title">Arahbo, Roar of the World</div>
+                                            </div>
+                                        </div>
+                                        <div class="c-order-list__item">
+                                            <div class="c-order-card">
+                                                <div class="c-order-card__count">2</div>
+                                                <div class="c-order-card__symbol">Х</div>
+                                                <div class="c-order-card__title">Conflux</div>
+                                            </div>
+                                        </div>
+                                        <div class="c-order-list__item">
+                                            <div class="c-order-card">
+                                                <div class="c-order-card__count">1</div>
+                                                <div class="c-order-card__symbol">Х</div>
+                                                <div class="c-order-card__title">Омнат, Очаг Маны</div>
+                                            </div>
+                                        </div>
+                                        <div class="c-order-list__item">
+                                            <div class="c-order-card">
+                                                <div class="c-order-card__count">6</div>
+                                                <div class="c-order-card__symbol">Х</div>
+                                                <div class="c-order-card__title">Pathelion II</div>
+                                            </div>
+                                        </div>
+                                        <div class="c-order-list__item">
+                                            <div class="c-order-card">
+                                                <div class="c-order-card__count">10</div>
+                                                <div class="c-order-card__symbol">Х</div>
+                                                <div class="c-order-card__title">Arahbo, Roar of the World</div>
+                                            </div>
+                                        </div>
+                                        <div class="c-order-list__item">
+                                            <div class="c-order-card">
+                                                <div class="c-order-card__count">2</div>
+                                                <div class="c-order-card__symbol">Х</div>
+                                                <div class="c-order-card__title">Conflux</div>
+                                            </div>
+                                        </div>
+                                        <div class="c-order-list__item">
+                                            <div class="c-order-card">
+                                                <div class="c-order-card__count">4</div>
+                                                <div class="c-order-card__symbol">Х</div>
+                                                <div class="c-order-card__title">Arahbo, Roar of the World</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-card-operation">
+                                <div class="order-card-status">
+                                    <div class="order-card-status__text">Статус: <span>Получено</span></div>
+                                </div>
+                                <div class="order-card-operation__btn">
+                                    <div class="c-btn-layout c-btn-layout--column c-btn-layout--center">
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">Отменить</a>
+                                        <a href="#" class="c-btn c-btn--middle c-btn--round">Повторить заказ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    {% endblock %}
+</div>
+
+{% include "./layout/sidebar.twig" %}
+
+<!-- FOOTER -->
+{% include "./layout/footer.twig" %}
