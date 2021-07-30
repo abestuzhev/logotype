@@ -103,10 +103,6 @@ p {
             margin-bottom: 30px;
         }
 
-        &-card {
-
-        }
-
         &__footer {
             position: absolute;
             bottom: -30px;
@@ -164,6 +160,12 @@ p {
                 font-size: 16px;
                 text-decoration: none;
             }
+        }
+    }
+
+    &-card {
+        &--disabled {
+            opacity: .3;
         }
     }
 

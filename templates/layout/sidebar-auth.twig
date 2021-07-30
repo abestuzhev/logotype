@@ -1,0 +1,48 @@
+<div class="sidebar-top">
+    <div class="sidebar-tab">
+        <a href="#sidebar-auth" class="active">Войти</a>
+        <a href="#sidebar-registration">Регистрация</a>
+    </div>
+    <div class="sidebar-top__body">
+        <div class="sidebar-auth is-show" id="sidebar-auth">
+            <form action="" class="c-form">
+                <div class="c-form__body">
+                    <div class="c-form__item">
+                        <input type="text" name="userLogin" class="c-input" placeholder="Логин">
+                    </div>
+                    <div class="c-form__item">
+                        <input type="password" name="userPassword" class="c-input" placeholder="Пароль">
+                    </div>
+                    <div class="c-form__footer">
+                        <div class="c-btn-layout c-btn-layout--center">
+                            <button class="c-btn c-btn--small c-btn--fullwidth">Войти</button>
+                        </div>
+                        <div class="c-form-layout c-form-layout--center">
+                            <a href="#" class="c-form-link">Забыли пароль?</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="sidebar-registration" id="sidebar-registration">
+
+        </div>
+        <div class="sidebar-basket active">
+            <div class="sidebar-basket-list"></div>
+            <div class="sidebar-basket__icon">
+                <svg class="c-icon icon-basket">
+                    <use xlink:href="./src/img/sprite.svg#icon-basket"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-top__footer">
+        <div class="sidebar-basket__footer">
+            <div class="sidebar-basket-count">
+                <span>Корзина</span>
+                <div class="sidebar-basket-count__number">52</div>
+            </div>
+            <div class="sidebar-basket__total">11 523p</div>
+        </div>
+    </div>
+</div>
