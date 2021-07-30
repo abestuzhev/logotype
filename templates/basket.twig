@@ -1,0 +1,154 @@
+<!-- HEADER -->
+{% include "./layout/header.twig" %}
+
+<div class="content">
+    {% block page %}
+        {% include "./layout/header-menu.twig" %}
+
+        <div class="page-content">
+            <div class="basket">
+                <h1 class="c-title__h1">Корзина</h1>
+                <div class="basket-table">
+                    <div class="basket-table-head">
+                        <div class="basket-table-head__col">
+                            <div class="basket-table-head__title"></div>
+                        </div>
+                        <div class="basket-table-head__col">
+                            <div class="basket-table-head__title">Название</div>
+                        </div>
+                        <div class="basket-table-head__col">
+                            <div class="basket-table-head__title">Цена</div>
+                        </div>
+                        <div class="basket-table-head__col">
+                            <div class="basket-table-head__title">Количество</div>
+                        </div>
+                        <div class="basket-table-head__col">
+                            <div class="basket-table-head__title"></div>
+                        </div>
+                    </div>
+                    <div class="basket-table-body">
+                        {# START basket-table-row#}
+                        <div class="basket-table-row">
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__img">
+                                    <img src="./src/img/product-card-classic-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__name">"Rumors of My Death "</div>
+                            </div>
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__price">18 р.</div>
+                            </div>
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__counter">
+                                    <div class="c-counter">
+                                        <button class="c-counter__btn c-counter__btn--decrement"></button>
+                                        <input type="text" class="c-counter__input" value="1">
+                                        <button class="c-counter__btn c-counter__btn--increment"></button>
+                                    </div>
+                                    <span>18 р./шт.</span>
+                                </div>
+                            </div>
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__del">
+                                    <div class="icon-del"></div>
+                                </div>
+                            </div>
+                        </div>
+                        {# END basket-table-row#}
+                        {# START basket-table-row#}
+                        <div class="basket-table-row">
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__img">
+                                    <img src="./src/img/product-card-classic-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__name">Conflux </div>
+                            </div>
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__price">108 р.</div>
+                            </div>
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__counter">
+                                    <div class="c-counter">
+                                        <button class="c-counter__btn c-counter__btn--decrement"></button>
+                                        <input type="text" class="c-counter__input" value="1">
+                                        <button class="c-counter__btn c-counter__btn--increment"></button>
+                                    </div>
+                                    <span>18 р./шт.</span>
+                                </div>
+                            </div>
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__del">
+                                    <div class="icon-del"></div>
+                                </div>
+                            </div>
+                        </div>
+                        {# END basket-table-row#}
+                        {# START basket-table-row#}
+                        <div class="basket-table-row">
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__img">
+                                    <img src="./src/img/product-card-classic-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__name">Омнат, Очаг Маны</div>
+                            </div>
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__price">18 р.</div>
+                            </div>
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__counter">
+                                    <div class="c-counter">
+                                        <button class="c-counter__btn c-counter__btn--decrement"></button>
+                                        <input type="text" class="c-counter__input" value="1">
+                                        <button class="c-counter__btn c-counter__btn--increment"></button>
+                                    </div>
+                                    <span>18 р./шт.</span>
+                                </div>
+                            </div>
+                            <div class="basket-table-row__col">
+                                <div class="basket-table-row__del">
+                                    <div class="icon-del"></div>
+                                </div>
+                            </div>
+                        </div>
+                        {# END basket-table-row#}
+
+                    </div>
+
+
+                </div>
+
+                <div class="basket-footer">
+                    <div class="basket-footer__col">
+                        <div class="basket-promocode">
+                            <div class="basket-promocode__text">Промокод</div>
+                            <div class="basket-promocode__input">
+                                <input type="text" class="c-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket-footer__col">
+                        <div class="basket-total">432 р.</div>
+                    </div>
+                    <div class="basket-footer__col">
+                        <div class="c-btn-layout c-btn-layout--center">
+                            <a href="#" class="c-btn c-btn--middle c-btn--round">Перейти к оформлению</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    {% endblock %}
+</div>
+
+{% include "./layout/sidebar.twig" %}
+
+<!-- FOOTER -->
+{% include "./layout/footer.twig" %}

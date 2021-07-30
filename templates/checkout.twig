@@ -1,0 +1,22 @@
+<!-- HEADER -->
+{% include "./layout/header.twig" %}
+
+<div class="content">
+    {% block page %}
+        {% include "./layout/header-menu.twig" %}
+
+        <div class="page-content">
+            <div class="checkout">
+                <h1 class="c-title__h1">Оформление заказа</h1>
+
+            </div>
+        </div>
+
+
+    {% endblock %}
+</div>
+
+{% include "./layout/sidebar.twig" %}
+
+<!-- FOOTER -->
+{% include "./layout/footer.twig" %}

@@ -63,6 +63,15 @@ $(".search input").blur(function(){
 });
 
 
+$(".sidebar-tab a").on("click", function(event){
+  event.preventDefault();
+  const href = $(this).attr("href");
+  $(href).siblings().removeClass("is-show");
+  $(this).parents(".sidebar-tab").siblings().removeClass("active");
+  $(this).parents(".sidebar-tab").toggleClass("active");
+  $(href).toggleClass("is-show");
+});
+
 $(".panel-view__icon a").on("click", function(event){
   event.preventDefault();
   const href = $(this).attr("href");

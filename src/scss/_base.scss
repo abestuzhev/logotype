@@ -529,10 +529,20 @@ p {
 
 .c-order {
     width: 100%;
+    position: relative;
+
+    &-shadow {
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient( 180deg , rgba(24, 23, 28, 0) 0%, #111015 100%);
+    }
 
     &-list {
         &__item {
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
     }
 
@@ -564,5 +574,82 @@ p {
             line-height: 16px;
             font-size: 12px;
         }
+    }
+}
+
+.c-counter {
+    width: 130px;
+    height: 43px;
+    padding: 5px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $blue;
+    color: #fff;
+    border-radius: 150px;
+
+    &__btn {
+        width: 26px;
+        height: 26px;
+        flex: 0 0 26px;
+        cursor: pointer;
+        border-radius: 150px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        @include animation;
+        position: relative;
+
+        &:hover {
+            background-color: $blueDark;
+            @include animation;
+        }
+
+        &--decrement {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10px;
+                height: 2px;
+                background-color: #fff;
+                transform: translate(-50%,-50%);
+            }
+        }
+
+        &--increment {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10px;
+                height: 2px;
+                background-color: #fff;
+                transform: translate(-50%,-50%);
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 10px;
+                width: 2px;
+                background-color: #fff;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+
+    &__input {
+        width: 100%;
+        text-align: center;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 700;
+        color: #fff;
     }
 }

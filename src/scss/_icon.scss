@@ -81,3 +81,34 @@
   fill: #fff;
 }
 
+
+.icon-del {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    width: 17px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: $blue;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    width: 17px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: $blue;
+    transform: rotate(-45deg);
+  }
+}
