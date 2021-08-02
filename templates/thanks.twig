@@ -1,0 +1,31 @@
+<!-- HEADER -->
+{% include "./layout/header.twig" %}
+
+<div class="content">
+    {% block page %}
+        {% include "./layout/header-menu.twig" %}
+
+        <div class="page-content">
+            <div class="thanks">
+                <div class="thanks-head">
+                    <div class="thanks-title">Спасибо, за Ваш заказ!</div>
+                    <div class="thanks-number">№0001-0001</div>
+                </div>
+                <div class="thanks-body">
+                    <div class="thanks-text">Наш менеджер свяжется с Вами после сборки.</div>
+                </div>
+                <div class="c-btn-layout c-btn-layout--center">
+                    <a href="#" class="c-btn c-btn--middle c-btn--round">Открыть заказ</a>
+                    <a href="#" class="c-btn c-btn--middle c-btn--round c-btn--dark">Отменить</a>
+                </div>
+            </div>
+        </div>
+
+
+    {% endblock %}
+</div>
+
+{% include "./layout/sidebar-user.twig" %}
+
+<!-- FOOTER -->
+{% include "./layout/footer.twig" %}
