@@ -7,8 +7,42 @@
 }
 
 
-@media screen and (max-width:1300px) {
-  
+@media screen and (max-width:1400px) {
+  .product-list.modern {
+
+  }
+
+  .home {
+    &-sale {
+      .c-grid-col {
+        &:nth-child(1) {
+          width: 40%;
+        }
+        &:nth-child(2) {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    padding: 38px 16px;
+  }
+  .c-grid {
+    margin: 0;
+  }
+
+  .banner-top {
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+
 }
 
 
