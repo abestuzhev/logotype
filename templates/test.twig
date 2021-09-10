@@ -1,0 +1,19 @@
+<!-- HEADER -->
+{% include "./layout/header.twig" %}
+
+<div class="content">
+    {% block page %}
+        {% include "./layout/header-menu.twig" %}
+
+        <div class="page-content">
+
+        </div>
+
+
+    {% endblock %}
+</div>
+
+{% include "./layout/sidebar.twig" %}
+
+<!-- FOOTER -->
+{% include "./layout/footer.twig" %}

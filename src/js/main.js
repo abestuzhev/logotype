@@ -49,7 +49,7 @@ const resultsSlider = new Swiper('.js-slider', {
 //   }
 // });
 
-$(".sidebar-box__head").on("click", function(){
+$(document).on("click", ".sidebar-box__head", function(){
   $(this).toggleClass("is-show");
   $(this).parents(".sidebar-box").find(".sidebar-box__body").slideToggle(200);
 });
@@ -58,12 +58,24 @@ $(".search input").focus(function(){
   $(this).parents(".search").addClass("is-focus");
 });
 
+//scroll container
+var swiper = new Swiper(".mySwiper", {
+  direction: "vertical",
+  slidesPerView: "auto",
+  freeMode: true,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+  mousewheel: true,
+});
+
+
 $(".search input").blur(function(){
   $(this).parents(".search").removeClass("is-focus");
 });
 
 
-$(".sidebar-tab a").on("click", function(event){
+$(document).on("click", ".sidebar-tab a", function(event){
   event.preventDefault();
   const href = $(this).attr("href");
   $(href).siblings().removeClass("is-show");
@@ -72,7 +84,7 @@ $(".sidebar-tab a").on("click", function(event){
   $(href).toggleClass("is-show");
 });
 
-$(".panel-view__icon a").on("click", function(event){
+$(document).on("click", ".panel-view__icon a", function(event){
   event.preventDefault();
   const href = $(this).attr("href");
   $(href).siblings().removeClass("is-show");
@@ -81,14 +93,14 @@ $(".panel-view__icon a").on("click", function(event){
   $(href).toggleClass("is-show");
 });
 
-if($(".sidebar-box").has("is-hide")){
+if(!$(".sidebar-box").has("is-hide")){
   console.log("sidebar-box have class is-hide")
   $('.sidebar-box__head').removeClass("is-show");
   $('.sidebar-box__body').css("display", "none");
 };
 
 
-$(".c-form-box-info__link.is-change").on("click", function(event){
+$(document).on("click", ".c-form-box-info__link.is-change", function(event){
   event.preventDefault();
   const parent = $(this).parents(".c-form-box-info");
   parent.toggleClass("is-edited");
@@ -116,6 +128,157 @@ const documentWidth = (document.documentElement.clientWidth); // ширина м
 // }
 
 
+// popup-auth
+$(function(){
+  $(document).on("click", ".js-show-popup", function(e){
+    e.preventDefault();
+    $(".product-popup-layout").toggleClass("is-open");
+  })
+
+  $(document).on("click", ".product-popup-close", function(e){
+    e.preventDefault();
+    console.log("hello")
+    $(".product-popup-layout").toggleClass("is-open");
+  })
+
+  const $html = $('html');
+  const $header = $('.header_wrap header');
+
+  function showPopup(icon, popup) {
+    $(document).on('click', icon, function (e) {
+
+      e.preventDefault();
+      const costType = $(this).attr('data-type');
+      const costName = $(this).attr('data-name');
+      console.log('type', costType);
+      console.log('name', costName);
+      if (costType !== '') {
+
+        $(popup).addClass(costType);
+        $(popup).find('.popup-title').text(costName)
+      }
+
+      $(popup).addClass('is-visible');
+      $('.mfp-bg').addClass('is-visible');
+
+
+      $html.addClass('blocked');
+      // $('body').addClass('blocked');
+
+      const widthScroll = windowWidth - documentWidth;
+      console.log('widthScroll: ' + widthScroll);
+      if (windowWidth > documentWidth) {
+        $html.css({
+          'margin-right': widthScroll
+        });
+        $header.css({
+          'padding-right': widthScroll
+        });
+      }
+    });
+  }
+
+  $(document).on('click', '.js-popup-close', function (e) {
+    e.preventDefault();
+    $(this).parents('.mfp-wrap').removeClass('is-visible');
+    $('.mfp-bg').removeClass('is-visible');
+    $html.css({
+      'margin-right': '0'
+    }).removeClass('blocked');
+
+    $header.css({
+      'padding-right': '0'
+    });
+
+    const parentModal = $(this).parents('.mfp-wrap');
+    if (parentModal.data('save')) {
+      onPopupClose(parentModal);
+    }
+  });
+
+  showPopup("#sidebar-registration", '.popup-auth');
+
+  /*сворачивание / разворачивание фильтров в сйдбаре*/
+  const slideDownFilter = (elem) => {
+    elem.text('Свернуть')
+  }
+
+  const slideUpFilter = (elem) => {
+    elem.text('Посмотреть все');
+  }
+
+  $(document).on('click', '.sidebar-box__more', function(e){
+    e.preventDefault();
+    const $parentBox = $(this).parents('.sidebar-box');
+    $parentBox.toggleClass('is-show');
+    $parentBox.hasClass('is-show') ?  slideDownFilter($(this)) : slideUpFilter($(this));
+
+    const $list = $parentBox.find(".js-sidebar-box-list")
+
+    const scrollBox = new Swiper($list, {
+      direction: "vertical",
+      slidesPerView: "auto",
+      freeMode: true,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      mousewheel: true,
+    });
+
+  })
+});
+
+
+
+/*запрет на скролл вне окна при активном скролле на div корзины*/
+$(function () {
+
+  const scrollEvents = ['wheel', 'mousewheel']
+
+  function freezeScroll(){
+    for (var i = 0; i < arguments.length; i++) {
+      elem = arguments[i];
+      let func = preventScrollEventFunc(elem);
+      let options = {passive: false};
+      $(elem).on('mouseenter', function(){
+        onWheel(window, func, options);
+      }).on('mouseleave', function(){
+        removeOnWheel(window, func);
+      });
+    }
+  }
+// Отменить скролл страницы, если элемент selector прокручен до упора
+  function preventScrollEventFunc(selector){
+    let elem = $(selector);
+    function preventScroll(e){
+      let offset = e.wheel || e.wheelDelta;
+      let crossingUpper = elem.scrollTop() == 0 && offset > 0;
+      let crossingDown = (elem[0].scrollHeight - elem.scrollTop() ==
+          elem[0].clientHeight && offset < 0);
+      if (crossingUpper || crossingDown){
+        e.preventDefault()
+      }
+    }
+    return preventScroll;
+  }
+// Повесить обработчик func для событий wheel и mousewheel у elem
+  function onWheel(elem, func, options){
+    options = options || {};
+    scrollEvents.forEach(function(item, i, arr){
+      elem.addEventListener(item, func, options);
+    });
+  }
+// Убрать обработчик func для событий wheel и mousewheel у elem
+  function removeOnWheel(elem, func, options){
+    options = options || {};
+    scrollEvents.forEach(function(item, i, arr){
+      elem.removeEventListener(item, func, options);
+    });
+  }
+
+  freezeScroll('.c-order-list');
+
+});
 
 /****************************************************************/
 /****************************************************************/
