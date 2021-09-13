@@ -245,8 +245,8 @@
                 display: block;
             }
 
-            .sidebar-box-list {
-                height: 268px;
+            .swiper {
+                height: 284px !important;
             }
         }
 
@@ -320,12 +320,15 @@
 
         }
 
+        .swiper {
+            height: 157px !important;
+        }
+
         &-list {
             margin: 0;
             margin-bottom: 16px;
             padding: 0;
             list-style: none;
-            height: 140px;
             overflow: hidden;
 
             &--horizontal {
@@ -1828,13 +1831,3 @@
     }
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    height: auto !important;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}

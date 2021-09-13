@@ -655,3 +655,14 @@ p {
         color: #fff;
     }
 }
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper .swiper-slide {
+    height: auto ;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
