@@ -140,6 +140,24 @@
 
             </div>
         </div>
+        <div class="mobile-icon">
+            <div class="mobile-icon__item">
+                <div class="mobile-icon__search">
+                    <svg class="c-icon icon-search">
+                        <use xlink:href="./src/img/sprite.svg#icon-search"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="mobile-icon__item">
+                <div class="mobile-icon__menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+
+        </div>
     </div>    
 </header>
         <div class="page-content">
@@ -303,7 +321,7 @@
     
 </div>
 
-<div class="sidebar is-hide">
+<div class="sidebar scroll">
 
     <div class="sidebar-top">
         <div class="sidebar-tab">
@@ -496,72 +514,69 @@
             <div class="sidebar-box__search">
                 <input type="search" class="c-input">
             </div>
-            <div class="swiper js-sidebar-box-list">
-                <div class="swiper-wrapper">
-                    <ul class="sidebar-box-list swiper-slide" >
-                        <li class="sidebar-box-list__item">
-                            <div class="c-checkbox">
-                                <input type="checkbox" id="issues-01" name="issues-01">
-                                <label for="issues-01">Strixhaven: School of Mages</label>
-                            </div>
-                        </li>
-                        <li class="sidebar-box-list__item">
-                            <div class="c-checkbox">
-                                <input type="checkbox" id="issues-02" name="issues-02">
-                                <label for="issues-02">Time Spiral Remastered </label>
-                            </div>
-                        </li>
-                        <li class="sidebar-box-list__item">
-                            <div class="c-checkbox">
-                                <input type="checkbox" id="issues-03" name="issues-03">
-                                <label for="issues-03">Kaldheim</label>
-                            </div>
-                        </li>
-                        <li class="sidebar-box-list__item">
-                            <div class="c-checkbox">
-                                <input type="checkbox" id="issues-04" name="issues-04">
-                                <label for="issues-04">Zendikar Rising</label>
-                            </div>
-                        </li>
-                        <li class="sidebar-box-list__item">
-                            <div class="c-checkbox">
-                                <input type="checkbox" id="issues-05" name="issues-05">
-                                <label for="issues-05">Double Masters</label>
-                            </div>
-                        </li>
-                        <li class="sidebar-box-list__item">
-                            <div class="c-checkbox">
-                                <input type="checkbox" id="issues-01" name="issues-01">
-                                <label for="issues-01">Strixhaven: School of Mages</label>
-                            </div>
-                        </li>
-                        <li class="sidebar-box-list__item">
-                            <div class="c-checkbox">
-                                <input type="checkbox" id="issues-02" name="issues-02">
-                                <label for="issues-02">Time Spiral Remastered </label>
-                            </div>
-                        </li>
-                        <li class="sidebar-box-list__item">
-                            <div class="c-checkbox">
-                                <input type="checkbox" id="issues-03" name="issues-03">
-                                <label for="issues-03">Kaldheim</label>
-                            </div>
-                        </li>
-                        <li class="sidebar-box-list__item">
-                            <div class="c-checkbox">
-                                <input type="checkbox" id="issues-04" name="issues-04">
-                                <label for="issues-04">Zendikar Rising Zendikar Rising </label>
-                            </div>
-                        </li>
-                        <li class="sidebar-box-list__item">
-                            <div class="c-checkbox">
-                                <input type="checkbox" id="issues-05" name="issues-05">
-                                <label for="issues-05">Double Masters Double Masters Double Masters</label>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="swiper-scrollbar"></div>
+            <div class="scroll">
+                <ul class="sidebar-box-list" >
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="issues-01" name="issues-01">
+                            <label for="issues-01">Strixhaven: School of Mages</label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="issues-02" name="issues-02">
+                            <label for="issues-02">Time Spiral Remastered </label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="issues-03" name="issues-03">
+                            <label for="issues-03">Kaldheim</label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="issues-04" name="issues-04">
+                            <label for="issues-04">Zendikar Rising</label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="issues-05" name="issues-05">
+                            <label for="issues-05">Double Masters</label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="issues-01" name="issues-01">
+                            <label for="issues-01">Strixhaven: School of Mages</label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="issues-02" name="issues-02">
+                            <label for="issues-02">Time Spiral Remastered </label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="issues-03" name="issues-03">
+                            <label for="issues-03">Kaldheim</label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="issues-04" name="issues-04">
+                            <label for="issues-04">Zendikar Rising Zendikar Rising </label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="issues-05" name="issues-05">
+                            <label for="issues-05">Double Masters Double Masters Double Masters</label>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
 
@@ -632,38 +647,40 @@
             </div>
         </div>
         <div class="sidebar-box__body">
-            <ul class="sidebar-box-list">
-                <li class="sidebar-box-list__item">
-                    <div class="c-checkbox">
-                        <input type="checkbox" id="type-01" name="type-01">
-                        <label for="type-01">Существо</label>
-                    </div>
-                </li>
-                <li class="sidebar-box-list__item">
-                    <div class="c-checkbox">
-                        <input type="checkbox" id="type-02" name="type-02">
-                        <label for="type-02">Волшество</label>
-                    </div>
-                </li>
-                <li class="sidebar-box-list__item">
-                    <div class="c-checkbox">
-                        <input type="checkbox" id="type-03" name="type-03">
-                        <label for="type-03">Мгновенное заклинание</label>
-                    </div>
-                </li>
-                <li class="sidebar-box-list__item">
-                    <div class="c-checkbox">
-                        <input type="checkbox" id="type-04" name="type-04">
-                        <label for="type-04">Земля</label>
-                    </div>
-                </li>
-                <li class="sidebar-box-list__item">
-                    <div class="c-checkbox">
-                        <input type="checkbox" id="type-05" name="type-05">
-                        <label for="type-05">Чары</label>
-                    </div>
-                </li>
-            </ul>
+            <div class="scroll">
+                <ul class="sidebar-box-list">
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="type-01" name="type-01">
+                            <label for="type-01">Существо</label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="type-02" name="type-02">
+                            <label for="type-02">Волшество</label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="type-03" name="type-03">
+                            <label for="type-03">Мгновенное заклинание</label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="type-04" name="type-04">
+                            <label for="type-04">Земля</label>
+                        </div>
+                    </li>
+                    <li class="sidebar-box-list__item">
+                        <div class="c-checkbox">
+                            <input type="checkbox" id="type-05" name="type-05">
+                            <label for="type-05">Чары</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <a href="#" class="sidebar-box__more">Посмотреть все</a>
         </div>
     </div>

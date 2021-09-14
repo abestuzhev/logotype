@@ -33,6 +33,11 @@
     background-color: #111015;
     min-height: 100vh;
     padding: 54px 32px;
+    transition: all .2s ease-in-out;
+
+    &.is-show {
+        right: 0;
+    }
 
     &-top {
         margin-bottom: 64px;
@@ -245,9 +250,15 @@
                 display: block;
             }
 
-            .swiper {
-                height: 284px !important;
+            .scroll {
+                height: 274px !important;
+                overflow-y: scroll;
             }
+        }
+
+        .scroll {
+            overflow: hidden;
+            height: 147px !important;
         }
 
         &__head {
@@ -320,9 +331,7 @@
 
         }
 
-        .swiper {
-            height: 157px !important;
-        }
+
 
         &-list {
             margin: 0;
@@ -482,6 +491,57 @@
                 &:hover {
                     color: $blue;
                     @include animation;
+                }
+            }
+        }
+    }
+
+    .mobile {
+
+        &-icon {
+            display: none;
+            justify-content: flex-end;
+            flex-flow: row nowrap;
+
+            &__item {
+                margin-left: 24px;
+                cursor: pointer;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            &__search {
+                display: none;
+            }
+
+            &__menu {
+                width: 28px;
+                height: 24px;
+                position: relative;
+
+                span {
+                    display: block;
+                    background-color: #fff;
+                    border-radius: 20px;
+                    height: 3px;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+
+                    &:nth-child(1) {
+                        top: 0;
+                    }
+
+                    &:nth-child(2) {
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    &:nth-child(3) {
+                        bottom: 0;
+                    }
                 }
             }
         }

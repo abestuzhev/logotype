@@ -209,48 +209,51 @@ $(function(){
 
 
 
-  // $(document).on('click', '.sidebar-box__more', function(e){
-  //   e.preventDefault();
-  //   const $parentBox = $(this).parents('.sidebar-box');
-  //   $parentBox.toggleClass('is-show');
-  //   $parentBox.hasClass('is-show') ?  slideDownFilter($(this)) : slideUpFilter($(this));
-  //
-  //   const $list = $parentBox.find(".js-sidebar-box-list");
-  //
-  //   console.log("list", $list)
-  //
-  //
-  // })
+  $(document).on('click', '.sidebar-box__more', function(e){
+    e.preventDefault();
+    const $parentBox = $(this).parents('.sidebar-box');
+    $parentBox.toggleClass('is-show');
+    $parentBox.hasClass('is-show') ?  slideDownFilter($(this)) : slideUpFilter($(this));
+
+    const $list = $parentBox.find(".js-sidebar-box-list");
+
+    console.log("list", $list)
+  })
+
+  $(document).on('click', '.mobile-icon__menu', function(e){
+    e.preventDefault();
+    $(".sidebar").addClass("is-show")
+  })
 });
 
-const more = document.querySelector(".sidebar-box__more");
-document.addEventListener("click", function(e){
-
-
-  if(e.target.getAttribute("data-type") === "more") {
-    const $parent = e.target.parentNode.parentNode;
-    $parent.classList.contains("is-show") ? $parent.classList.remove('is-show') : $parent.classList.add('is-show')
-
-
-    const $list = $parent.querySelector(".swiper");
-
-    const scrollBox = new Swiper($list, {
-      direction: "vertical",
-      slidesPerView: "auto",
-      freeMode: true,
-      scrollbar: {
-        el: ".swiper-scrollbar",
-      },
-      mousewheel: true,
-    });
-    console.log()
-
-
-    freezeScroll('.sidebar-box-list');
-  }
-
-
-})
+// const more = document.querySelector(".sidebar-box__more");
+// document.addEventListener("click", function(e){
+//
+//
+//   if(e.target.getAttribute("data-type") === "more") {
+//     const $parent = e.target.parentNode.parentNode;
+//     $parent.classList.contains("is-show") ? $parent.classList.remove('is-show') : $parent.classList.add('is-show')
+//
+//
+//     const $list = $parent.querySelector(".swiper");
+//
+//     const scrollBox = new Swiper($list, {
+//       direction: "vertical",
+//       slidesPerView: "auto",
+//       freeMode: true,
+//       scrollbar: {
+//         el: ".swiper-scrollbar",
+//       },
+//       mousewheel: true,
+//     });
+//     console.log()
+//
+//
+//     freezeScroll('.sidebar-box-list');
+//   }
+//
+//
+// })
 
 
 /*запрет на скролл вне окна при активном скролле на div корзины*/
