@@ -224,6 +224,16 @@ $(function(){
     e.preventDefault();
     $(".sidebar").addClass("is-show")
   })
+
+  $(document).on('click', '.sidebar-mobile-close', function(e){
+    e.preventDefault();
+    $(".sidebar").removeClass("is-show")
+  })
+
+  $(document).on('click', '.mobile-icon__search', function(e){
+    e.preventDefault();
+    $(".search").toggleClass("is-show")
+  })
 });
 
 // const more = document.querySelector(".sidebar-box__more");
