@@ -130,6 +130,8 @@ const documentWidth = (document.documentElement.clientWidth); // ширина м
 
 // popup-auth
 $(function(){
+
+
   $(document).on("click", ".js-show-popup", function(e){
     e.preventDefault();
     $(".product-popup-layout").toggleClass("is-open");
@@ -217,7 +219,13 @@ $(function(){
 
     const $list = $parentBox.find(".js-sidebar-box-list");
 
-    console.log("list", $list)
+    $parentBox.find(".sidebar-box__search input").on("input", function(){
+      let value = $(this).val().toLowerCase().trim();
+
+      $parentBox.find(".sidebar-box-list__item").filter(function() {
+        $(this).toggle($(this).find('label').text().toLowerCase().indexOf(value) > -1)
+      });
+    })
   })
 
   $(document).on('click', '.mobile-icon__menu', function(e){
