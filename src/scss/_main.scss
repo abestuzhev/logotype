@@ -1486,6 +1486,102 @@
             }
         }
 
+        &-mobile {
+            display: none;
+            position: relative;
+            transition: all .2s ease-in-out;
+
+            &__current {
+                position: relative;
+                z-index: 11;
+                display: inline-block;
+                color: #fff;
+                font-weight: 400;
+                font-size: 12px;
+                min-width: 160px;
+                height: 40px;
+                padding: 0 30px 0 20px;
+                line-height: 38px;
+                border: 2px solid #37363c;
+                text-decoration: none;
+                border-radius: 150px;
+                cursor: pointer;
+                background-color: #37363c;
+
+                &-icon {
+                    transition: all .2s ease-in-out;
+                    position: absolute;
+                    top: 8px;
+                    right: 18px;
+                    width: 20px;
+                    height: 20px;
+                    //background-color: #ccc;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 9px;
+                        left: 2px;
+                        width: 10px;
+                        height: 2px;
+                        background-color: #f1f1f1;
+                        border-radius: 10px;
+                        transform: rotate(45deg);
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 9px;
+                        left: 8px;
+                        width: 10px;
+                        height: 2px;
+                        background-color: #f1f1f1;
+                        border-radius: 10px;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            &__list {
+                display: none;
+                background-color: #37363c;
+                position: absolute;
+                top: 16px;
+                left: 0;
+                right: 0;
+                padding-top: 30px;
+                padding-bottom: 12px;
+                z-index: 10;
+                border-radius: 10px;
+
+                a {
+                    display: block;
+                    padding: 12px 20px;
+                    font-size: 12px;
+                    color: #f1f1f1;
+                    text-decoration: none;
+                    transition: all .2s ease-in-out;
+
+                    &:hover {
+                        transition: all .2s ease-in-out;
+                        background-color: #0462dc;
+                    }
+                }
+            }
+
+            &.is-active {
+                transition: all .2s ease-in-out;
+                .panel-sort-mobile__current {
+                    background-color: #18171c;
+                }
+
+                .panel-sort-mobile__current-icon {
+                    transition: all .2s ease-in-out;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
     }
 
     &-view {

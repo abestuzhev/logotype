@@ -113,7 +113,8 @@
     }
   }
 
-  #view-list {
+  #view-list,
+  .panel-view__icon  .icon-list {
     display: none;
   }
 
@@ -259,6 +260,10 @@
     &-sort {
       &-list {
         display: none;
+      }
+
+      &-mobile {
+        display: block;
       }
     }
   }

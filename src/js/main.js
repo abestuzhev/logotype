@@ -131,6 +131,19 @@ const documentWidth = (document.documentElement.clientWidth); // ширина м
 // popup-auth
 $(function(){
 
+  $(document).on('click', '.panel-sort-mobile__current', function(e){
+    $(this).parents(".panel-sort-mobile").toggleClass("is-active")
+    $(this).siblings(".panel-sort-mobile__list").slideToggle(300);
+  });
+  $(document).on('click', '.panel-sort-mobile__list a', function(e){
+    e.preventDefault();
+    const text = $(this).text();
+    const parent = $(this).parents(".panel-sort-mobile");
+    parent.find(".panel-sort-mobile__current span").text(text);
+    parent.find(".panel-sort-mobile__list").slideUp(300);
+    parent.removeClass("is-active");
+  });
+
 
   $(document).on("click", ".js-show-popup", function(e){
     e.preventDefault();
@@ -208,8 +221,6 @@ $(function(){
   const slideUpFilter = (elem) => {
     elem.text('Посмотреть все');
   }
-
-
 
   $(document).on('click', '.sidebar-box__more', function(e){
     e.preventDefault();
