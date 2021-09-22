@@ -1641,7 +1641,7 @@ p {
             top: -20px;
             left: -20px;
             right: -20px;
-            bottom: 0;
+            bottom: -20px;
             background: url(./../src/img/failmask.png) 0 0 no-repeat;
             background-size: cover; }
         .product-list.modern .product-card__img img {
@@ -1738,6 +1738,18 @@ p {
         padding-bottom: 20px;
         position: relative;
         overflow: hidden; }
+        .product-list.classic .product-card__img.failmask .product-card__img-wrapper {
+          position: relative; }
+          .product-list.classic .product-card__img.failmask .product-card__img-wrapper::after {
+            content: "";
+            z-index: 99;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: url(./../src/img/failmask.png) 0 0 no-repeat;
+            background-size: cover; }
         .product-list.classic .product-card__img-wrapper {
           position: relative;
           z-index: 2;
@@ -1779,6 +1791,19 @@ p {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; }
+        .product-list.grid .product-card__img.failmask .product-card__img-wrapper {
+          position: relative;
+          overflow: hidden; }
+          .product-list.grid .product-card__img.failmask .product-card__img-wrapper::after {
+            content: "";
+            z-index: 99;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: url(./../src/img/failmask.png) 0 0 no-repeat;
+            background-size: cover; }
         .product-list.grid .product-card__img img {
           width: 100%;
           height: auto; }
