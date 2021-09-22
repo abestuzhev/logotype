@@ -1004,11 +1004,27 @@
             .product-card {
                 min-width: 246px;
                 margin-bottom: 25px;
+
                 &__img {
                     position: relative;
                     height: 180px;
                     overflow: hidden;
                     border-radius: 10px 10px 0 0;
+
+                    &.failmask {
+                        position: relative;
+                        &::after {
+                            content: "";
+                            z-index: 99;
+                            position: absolute;
+                            top: -20px;
+                            left: -20px;
+                            right: -20px;
+                            bottom: 0;
+                            background: url(./../src/img/failmask.png) 0 0 no-repeat;
+                            background-size: cover;
+                        }
+                    }
 
                     img {
                         width: 100%;
